@@ -95,17 +95,20 @@
                                     </div>
 
                                     <div data-mdb-input-init class="form-outline mb-4">
-                                        <input type="text" name="apellidos" class="form-control" value="<%=u.getApellidos()%>"
+                                        <input type="text" name="apellidos" class="form-control"
+                                               value="<%=u.getApellidos()%>"
                                                placeholder="Apellidos"/>
                                     </div>
 
                                     <div data-mdb-input-init class="form-outline mb-4">
-                                        <input type="email" name="correo" class="form-control" value="<%=u.getCorreo()%>"
+                                        <input type="email" name="correo" class="form-control"
+                                               value="<%=u.getCorreo()%>"
                                                placeholder="Correo"/>
                                     </div>
 
                                     <div data-mdb-input-init class="form-outline mb-4">
-                                        <input type="tel" name="telefono" class="form-control" value="<%=u.getTelefono()%>"
+                                        <input type="tel" name="telefono" class="form-control"
+                                               value="<%=u.getTelefono()%>"
                                                placeholder="Telefono"/>
                                     </div>
 
@@ -115,7 +118,8 @@
                                     </div>
 
                                     <div data-mdb-input-init class="form-outline mb-4">
-                                        <input type="number" name="estatus" class="form-control" value="<%=u.getEstatus()%>"
+                                        <input type="number" name="estatus" class="form-control"
+                                               value="<%=u.getEstatus()%>"
                                                placeholder="Estatus"/>
                                     </div>
 

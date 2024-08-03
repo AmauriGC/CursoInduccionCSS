@@ -1,26 +1,33 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<!DOCTYPE html>
-<html lang="es">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Acceso Denegado</title>
+    <title>Login</title>
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/CSS/bootstrap.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/CSS/index.css">
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
 </head>
 <body>
-<div class="container text-center mt-5">
-    <div class="row">
-        <div class="col-md-12">
-            <div class="alert alert-danger" role="alert">
-                <h1 class="display-4">Acceso Denegado</h1>
-                <p class="lead">No tienes permiso para acceder a esta página.</p>
-                <hr class="my-4">
-                <p>Si crees que esto es un error, por favor contacta al administrador del sistema.</p>
-                <a class="btn btn-primary btn-lg" href="index.jsp" role="button">Volver al Inicio</a>
+<section class="h-100 gradient-form box" style="background-color: #eee;">
+    <div class="container py-5 h-100">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col-xl-10">
+                <div class="card rounded-3 text-black">
+
+                    <div class="card-body p-md-5 mx-md-4">
+
+                        <div class="text-center">
+                            <h4 class="mt-1 mb-5 pb-1">Acceso Denegado</h4>
+                            <p>No tienes permiso para acceder a esta página</p>
+                            <p>Si crees que esto es un error, por favor contacta al administrador del sistema.</p>
+                            <a href="index.jsp" class="btn btn-outline-primary">Inicio</a>
+                        </div>
+
+                    </div>
+
+                </div>
             </div>
         </div>
     </div>
-</div>
-<script src="JS/bootstrap.js"></script>
+</section>
 </body>
 </html>
-

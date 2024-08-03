@@ -11,7 +11,7 @@ import java.util.ArrayList;
 
 public class GrupoDao {
 
-    //Programar una función R (lectura) para obtener un Aspirante
+    //Programar una función R (lectura) para obtener un grupo
     //con el fin de hacer el inicio de sesión
 
     public Grupo getOneG(int id_grupo) {

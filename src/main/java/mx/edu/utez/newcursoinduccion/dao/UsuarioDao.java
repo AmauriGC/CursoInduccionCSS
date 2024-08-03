@@ -88,6 +88,7 @@ public class UsuarioDao {
                 u.setTelefono(rs.getInt("telefono"));
                 u.setCurp(rs.getString("curp"));
                 u.setEstatus(rs.getInt("estatus"));
+                u.setId_rol(rs.getInt("id_rol"));
                 lista.add(u);
             }
         } catch (SQLException e) {

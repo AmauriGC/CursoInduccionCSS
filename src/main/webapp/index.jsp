@@ -7,13 +7,14 @@
     <meta name='viewport' content='width=device-width, initial-scale=1.0'>
 </head>
 <body>
-<section class="h-75 gradient-form box" style="background-color: #eee;">
-    <div class="container py-5 h-75">
+<section class="h-100 gradient-form box" style="background-color: #eee;">
+    <div class="container py-5 h-100">
         <div class="row d-flex justify-content-center align-items-center h-100">
             <div class="col-xl-10">
                 <div class="card rounded-3 text-black">
                     <div class="row g-0">
                         <div class="col-lg-6">
+
                             <div class="card-body p-md-5 mx-md-4">
 
                                 <div class="text-center">
@@ -64,9 +65,7 @@
                                                 ¿Olvidaste la contraseña?</a>
                                         </div>
                                     </div>
-
                                 </form>
-
                             </div>
                         </div>
                         <div class="col-lg-6 d-flex align-items-center gradient-custom-2">

@@ -19,15 +19,16 @@
                                 <div class="text-center">
                                     <h4 class="mt-1 mb-5 pb-1">
                                         <% if (request.getSession().getAttribute("grupo") == null) { %>
-                                        Registrar <% } else { %> Actualizar <% } %>
+                                        Registrar <% } else { %>  <% } %>
                                     </h4>
                                     <p><% if (request.getSession().getAttribute("grupo") == null) { %>
-                                        Registrar Grupos <% } else { %> Actualizar Grupos <% } %></p>
+                                        Registrar Grupos <% } else { %>  <% } %></p>
                                 </div>
 
                                 <!-- Formulario -->
                                 <% HttpSession sesion = request.getSession();
                                     Grupo g = (Grupo) sesion.getAttribute("grupo");
+
                                     if (g == null) { %>
 
                                 <form method="post" action="register">
@@ -53,10 +54,7 @@
                                 </form>
 
                                 <% } else { %>
-                                <%
-                                    sesion.removeAttribute("grupo");
-                                    sesion.removeAttribute("mensaje");
-                                %>
+
                                 <% } %>
                                 <%
                                     sesion.removeAttribute("grupo");

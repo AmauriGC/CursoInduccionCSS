@@ -1,6 +1,7 @@
 <%@ page import="java.util.ArrayList" %>
-<%@ page import="mx.edu.utez.newcursoinduccion.dao.GrupoDao" %>
-<%@ page import="mx.edu.utez.newcursoinduccion.model.Grupo" %>
+<%@ page import="mx.edu.utez.newcursoinduccion.dao.GrupoAspiranteDao" %>
+<%@ page import="mx.edu.utez.newcursoinduccion.model.GrupoAspirante" %>
+
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -12,26 +13,39 @@
     <table id="example" style="width: 100%">
         <thead>
         <tr>
-            <th>Grupo</th>
-            <th>Letra</th>
-            <th>Cantidad</th>
-            <th>...</th>
+            <th>id_grupo</th>
+            <th>letra</th>
+            <th>id_aspirante</th>
+            <th>nombreA</th>
+            <th>apellidosA</th>
+            <th>correoA</th>
+            <th>id_usuario</th>
+            <th>nombreU</th>
+            <th>apellidosU</th>
+            <th>correoU</th>
+            <th>id_materia</th>
+            <th>nombreM</th>
         </tr>
         </thead>
         <tbody>
         <%
-            GrupoDao dao = new GrupoDao();
-            ArrayList<Grupo> lista = dao.getAllG();
-            for (Grupo g : lista) {%>
+            GrupoAspiranteDao dao = new GrupoAspiranteDao();
+            ArrayList<GrupoAspirante> lista = dao.getAllGA();
+
+            for (GrupoAspirante g : lista) {%>
         <tr>
             <td><%=g.getId_grupo()%></td>
             <td><%=g.getLetra()%></td>
-            <td><%=g.getCantidad()%></td>
-            <td>
-                <button class="boton">
-                    <a href="gestionGruposAspirante.jsp?id_grupo=<%=g.getId_grupo()%>">Gestionar</a>
-                </button>
-            </td>
+            <td><%=g.getId_aspirante()%></td>
+            <td><%=g.getNombreA()%></td>
+            <td><%=g.getApellidosA()%></td>
+            <td><%=g.getCorreoA()%></td>
+            <td><%=g.getId_usuario()%></td>
+            <td><%=g.getNombreU()%></td>
+            <td><%=g.getApellidosU()%></td>
+            <td><%=g.getCorreoU()%></td>
+            <td><%=g.getId_materia()%></td>
+            <td><%=g.getNombreM()%></td>
         </tr>
         <% } %>
         </tbody>

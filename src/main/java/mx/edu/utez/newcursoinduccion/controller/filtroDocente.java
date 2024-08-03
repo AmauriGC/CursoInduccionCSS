@@ -10,19 +10,10 @@ import jakarta.servlet.http.HttpSession;
 import java.io.IOException;
 
 @WebFilter(urlPatterns = {
-        "/administrador.jsp",
-
-        "/registarUsuarios.jsp",
-        "/registrarGrupos.jsp",
-
-        "/gestionUsuario.jsp",
-        "/gestionAdministrador.jsp",
-        "/gestionGrupos.jsp",
-
-        "/solicitudRecuperacion.jsp",
-        "/recuperacion.jsp"
+        "/docente.jsp",
 })
-public class filtroAdministrador implements Filter {
+
+public class filtroDocente implements Filter {
     @Override
     public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain)
             throws IOException, ServletException {
@@ -32,7 +23,7 @@ public class filtroAdministrador implements Filter {
 
         HttpSession session = httpRequest.getSession(false);
 
-        boolean isAdministrador = false;
+        boolean isDocente = false;
 
         if (session != null) {
             System.out.println("Sesión obtenida. id_rol = " + session.getAttribute("id_rol"));
@@ -41,14 +32,14 @@ public class filtroAdministrador implements Filter {
         }
 
         int idRol = (session != null && session.getAttribute("id_rol") != null) ? (int) session.getAttribute("id_rol") : -1;
-        if (idRol == 1) {
-            isAdministrador = true;
+        if (idRol == 2) {
+            isDocente = true;
             System.out.println("Usuario es docente.");
         } else {
             System.out.println("Usuario no es docente. Redirigiendo a acceso denegado.");
         }
 
-        if (isAdministrador) {
+        if (isDocente) {
             httpResponse.setHeader("Cache-Control", "no-cache, no-store, must-revalidate");
             httpResponse.setHeader("Pragma", "no-cache");
             httpResponse.setDateHeader("Expires", 0);
@@ -58,3 +49,5 @@ public class filtroAdministrador implements Filter {
         }
     }
 }
+
+
